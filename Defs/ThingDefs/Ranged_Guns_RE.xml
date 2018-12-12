@@ -90,7 +90,7 @@
     <label>P7</label>
     <description>An ancient pistol design. Once popular with law enforcement due to its compact size.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/Autopistol</texPath>
+      <texPath>Things/Weapons/P7</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Autopistol</soundInteract>
