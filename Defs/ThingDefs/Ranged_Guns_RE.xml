@@ -22,6 +22,7 @@
       <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
+	  <li>Shield_Sidearm</li>
       <li>SimpleGun</li>
       <li>Revolver</li>
     </weaponTags>
@@ -419,7 +420,7 @@
         <defaultProjectile>Bullet_BattleRifle</defaultProjectile>
         <warmupTime>1.1</warmupTime>
         <range>32.3</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
         <soundCast>Shot_AssaultRifle</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
@@ -675,9 +676,9 @@
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>Gun_ChargeLMG</defName>
 		<label>Charge LMG</label>
-		<description>Charged-shot light machine gun designed for suppression</description>
+		<description>Similiar to the Charge Rifle, this weapon has additional recoil compession and cooling systems.</description>
 		<graphicData>
-			<texPath>Things/Weapons/M60</texPath>
+			<texPath>Things/Weapons/ChargeLMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_ChargeRifle</soundInteract>
@@ -710,8 +711,8 @@
 				<warmupTime>1.73</warmupTime>
 				<range>31</range>
 				<ticksBetweenBurstShots>13</ticksBetweenBurstShots>
-				<burstShotCount>6</burstShotCount>
-				<soundCast>Shot_ChargeRifle</soundCast>
+				<burstShotCount>5</burstShotCount>
+				<soundCast>Shot_ChargeBlaster</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>10</muzzleFlashScale>
 			</li>
@@ -751,7 +752,7 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>30</damageAmountBase>
+      <damageAmountBase>29</damageAmountBase>
       <stoppingPower>2</stoppingPower>
       <speed>115</speed>
     </projectile>
@@ -775,7 +776,7 @@
     <statBases>
       <WorkToMake>46000</WorkToMake>
       <Mass>6.3</Mass>
-      <AccuracyTouch>0.55</AccuracyTouch>
+      <AccuracyTouch>0.45</AccuracyTouch>
       <AccuracyShort>0.75</AccuracyShort>
       <AccuracyMedium>0.85</AccuracyMedium>
       <AccuracyLong>0.85</AccuracyLong>
@@ -840,7 +841,7 @@
     <statBases>
       <WorkToMake>47000</WorkToMake>
       <Mass>11</Mass>
-      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyTouch>0.30</AccuracyTouch>
       <AccuracyShort>0.70</AccuracyShort>
       <AccuracyMedium>0.86</AccuracyMedium>
       <AccuracyLong>0.88</AccuracyLong>
@@ -906,7 +907,7 @@
     <statBases>
       <WorkToMake>46000</WorkToMake>
       <Mass>15</Mass>
-      <AccuracyTouch>0.350</AccuracyTouch>
+      <AccuracyTouch>0.35</AccuracyTouch>
       <AccuracyShort>0.45</AccuracyShort>
       <AccuracyMedium>0.50</AccuracyMedium>
       <AccuracyLong>0.45</AccuracyLong>
@@ -923,8 +924,8 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_AMR</defaultProjectile>
         <warmupTime>3.75</warmupTime>
-        <range>39.5</range>
-        <soundCast>Shot_SniperRifle</soundCast>
+        <range>34.2</range>
+        <soundCast>Shot_TurretSniper</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>12</muzzleFlashScale>
       </li>
@@ -954,6 +955,70 @@
   </ThingDef>
 
 <!--=== CQB ===-->
+<!-- Uzi -->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Uzi</defName>
+    <label>Uzi</label>
+    <description>A small personal defense weapon of Israeli design. Short-ranged with only limited stopping power, its high rate of fire makes it lethal in close quarters.</description>
+    <graphicData>
+      <texPath>Things/Weapons/Uzi</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_SMG</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>11000</WorkToMake>
+      <Mass>2.5</Mass>
+      <AccuracyTouch>0.93</AccuracyTouch>
+      <AccuracyShort>0.66</AccuracyShort>
+      <AccuracyMedium>0.34</AccuracyMedium>
+      <AccuracyLong>0.14</AccuracyLong>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>45</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_MachinePistol</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>19.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
 <!-- USAS-12 -->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_USASTwelve</defName>
@@ -1025,7 +1090,7 @@
 		<label>KRISS Vector</label>
 		<description>A uniquely shaped, lightweight SMG designed for close-quarters fighting.</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/HeavySMG</texPath>
+			<texPath>Things/Weapons/KrissVector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
@@ -1057,7 +1122,7 @@
 				<warmupTime>0.8</warmupTime>
 				<range>23.5</range>
 				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
 				<soundCast>Shot_HeavySMG</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
@@ -1084,5 +1149,277 @@
     </tools>
 	</ThingDef>
 
+<!--=== Launchers ===-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ATRocket</defName>
+    <label>rocket</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>4.2</explosionRadius>
+      <speed>53</speed>
+    </projectile>
+  </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SmallRocket</defName>
+    <label>rocket</label>
+    <graphicData>
+      <texPath>Things/Projectile/Shell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>2.6</explosionRadius>
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+<!-- Milkor MGL -->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_MGL</defName>
+		<label>Milkor MGL</label>
+    <description>An ancient, man-portable grenade launcher. The 6-shot cylinder allows for a relatively high volume of fire.</description>
+		<graphicData>
+			<texPath>Things/Weapons/MilkorMGL</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<generateCommonality>0.05</generateCommonality>
+		<statBases>
+			<WorkToMake>25500</WorkToMake>
+			<Mass>5.1</Mass>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Chemfuel>30</Chemfuel>
+		</costList>
+    <recipeMaker>
+      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>	
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_SmallRocket</defaultProjectile>
+				<warmupTime>2.5</warmupTime>
+				<range>23.9</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>				
+        <forcedMissRadius>0.2</forcedMissRadius>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Shot_IncendiaryLauncher</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+	
+<!-- M72 LAW-->	
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_M72LAW</defName>
+    <label>M72 LAW</label>
+    <description>A lightweight, single-use anti-tank launcher. Designed to provide soldiers in the field with a compact anti-armor weapon.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Weapons/M72</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>400</MarketValue>
+      <Mass>2.6</Mass>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>Gun</li>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>SingleUseWeapon</li>
+    </thingSetMakerTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_ShootOneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ATRocket</defaultProjectile>
+        <warmupTime>3.25</warmupTime>
+        <forcedMissRadius>0.2</forcedMissRadius>		
+        <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+        <range>35.9</range>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <stopBurstWithoutLos>false</stopBurstWithoutLos>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>tube</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.3</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- M72 LAW Recipe -->
+  <RecipeDef Name="MakeM72LAW" Abstract="true">
+    <label>make M72 LAW x5</label>
+    <description>Craft 5 M72 LAWs.</description>
+    <jobString>Making M72 LAW.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+	<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>	
+    <workSkill>Crafting</workSkill>   
+	<workAmount>22500</workAmount>
+    	<recipeUsers>
+			<li>TableMachining</li>
+		</recipeUsers>
+	<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Chemfuel</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Gun_M72LAW>5</Gun_M72LAW>
+    </products>
+    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+  </RecipeDef>
+
+  <!-- M72 LAW Recipe -->
+  <RecipeDef Name="MakeSingleM72LAW" Abstract="true">
+    <label>make an M72 LAW</label>
+    <description>Craft an M72 Light Anti-Tank Weapon.</description>
+    <jobString>Making M72 LAW launchers.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+	<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>	
+    <workSkill>Crafting</workSkill>   
+	<workAmount>4700</workAmount>
+    	<recipeUsers>
+			<li>TableMachining</li>
+		</recipeUsers>
+	<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>6</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Chemfuel</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Gun_M72LAW>1</Gun_M72LAW>
+    </products>
+    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+  </RecipeDef>
   
 </Defs>
