@@ -1367,59 +1367,5 @@
     </products>
     <researchPrerequisite>PrecisionRifling</researchPrerequisite>
   </RecipeDef>
-
-  <!-- M72 LAW Recipe -->
-  <RecipeDef Name="MakeSingleM72LAW" Abstract="true">
-    <label>make an M72 LAW</label>
-    <description>Craft an M72 Light Anti-Tank Weapon.</description>
-    <jobString>Making M72 LAW launchers.</jobString>
-    <workSpeedStat>SmithingSpeed</workSpeedStat>
-    <effectWorking>Cook</effectWorking>
-    <soundWorking>Recipe_Machining</soundWorking>
-    <allowMixingIngredients>true</allowMixingIngredients>
-	<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>	
-    <workSkill>Crafting</workSkill>   
-	<workAmount>4700</workAmount>
-    	<recipeUsers>
-			<li>TableMachining</li>
-		</recipeUsers>
-	<ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Steel</li>
-          </thingDefs>
-        </filter>
-        <count>10</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Chemfuel</li>
-          </thingDefs>
-        </filter>
-        <count>6</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ComponentIndustrial</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>Steel</li>
-        <li>Chemfuel</li>
-        <li>ComponentIndustrial</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <products>
-      <Gun_M72LAW>1</Gun_M72LAW>
-    </products>
-    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
-  </RecipeDef>
   
 </Defs>
